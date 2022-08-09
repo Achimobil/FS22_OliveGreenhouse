@@ -4,11 +4,51 @@
     <version>0.1.0.0</version>
     
     <title>
-        <en>Olive Greenhouse</en>
+        <de>Oliven Plantage</de>
+        <en>Olive Garden</en>
     </title>
     
     <description>
-        <en><![CDATA[Olive Greenhouse]]></en>
+        <de><![CDATA[Ein Plantage für Oliven.
+
+Eine Karte oder Mod mit Leerpaletten ist erfoderlich.
+Der Mod Production Revamp ist erforderlich.
+
+Input: 
+- 100 Wasser
+- 100 leere Paletten
+
+Booster:
+- Dünger für +100%
+- Herbizid für +50%
+
+Output:
+- 200 Oliven (ohne Booster)
+
+24 Zyklen pro Monat
+120€ Poduktionskosten pro Monat
+100€ tägliche Unterhaltskosten
+10000€ Baukosten]]></de>
+        <en><![CDATA[A Plantage for olives.
+
+A map or mod with empty pallets is required.
+The Production Revamp mod is required.
+
+Input: 
+- 100 Water
+- 100 Empty Pallets
+
+Booster:
+- Fertilizer for +100%
+- Herbicide for +50%
+
+Output:
+- 200 Olives (without booster)
+
+24 cycles per month
+120€ poduction costs per month
+100€ daily upkeep
+10000€ building costs]]></en>
     </description>
     
     <iconFilename>icon.png</iconFilename>
@@ -31,4 +71,15 @@
 	</extraSourceFiles>
 
     <revamp minVersion="1.2.0.16" />
+    
+    <l10n>
+        <text name="oliveGreenhouse">
+            <de>Oliven Plantage</de> 
+            <en>Olive Plantage</en>
+        </text>
+        <text name="function_oliveGreenhouse"> 
+            <de>Ein Plantage für Oliven.</de>
+            <en>A Plantage for olives.</en>
+        </text>
+    </l10n>
 </modDesc>

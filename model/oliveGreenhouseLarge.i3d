@@ -172,7 +172,7 @@
             <TransformGroup name="effectNode1" translation="2.53521 2.60432 -6.9343" nodeId="95"/>
           </TransformGroup>
           <TransformGroup name="sellingStation" translation="0 -0.0799942 0" nodeId="96">
-            <Shape shapeId="2" name="unloadTrigger" translation="14 1.4 8" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" nodeId="97" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="2" name="unloadTrigger" translation="14 -0.012 8" static="true" trigger="true" collisionMask="1073741824" nodeId="97" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
             <TransformGroup name="unloadTriggerMarker" translation="14 0.709 8" nodeId="98"/>
             <TransformGroup name="unloadTriggerAINode" translation="15.5 0.05 8" rotation="0 90 0" nodeId="99"/>
             <TransformGroup name="grainGutterLinkNode" translation="14 0.025 8" rotation="0 90 0" nodeId="100"/>

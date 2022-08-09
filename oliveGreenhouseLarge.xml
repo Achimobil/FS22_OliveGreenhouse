@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="FS22_A_ProductionRevamp.RevampGreenhouse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>$l10n_shopItem_greenhouseLarge</name>
+        <name>$l10n_oliveGreenhouse</name>
         <functions>
-            <function>$l10n_function_productionPoint</function>
+            <function>$l10n_function_oliveGreenhouse</function>
         </functions>
         <image>store/oliveGreenhouseLarge.png</image>
         <price>10000</price>
@@ -116,7 +116,7 @@
             <unloadTrigger exactFillRootNode="unloadTrigger" fillTypes="WATER EMPTYPALLET FERTILIZER HERBICIDE" aiNode="unloadTriggerAINode" />
         </sellingStation>
 
-        <loadingStation fillTypes="WATER" supportsExtension="true" />
+        <loadingStation fillTypes="WATER EMPTYPALLET FERTILIZER HERBICIDE" supportsExtension="true" />
 
         <palletSpawner node="palletSpawner">
             <spawnPlaces>
