@@ -124,17 +124,24 @@
             </spawnPlaces>
         </palletSpawner>
 
-        <storage node="storage" isExtension="false" fillTypes="WATER" fillLevelSyncThreshold="20" >
-            <capacity fillType="WATER"          capacity="400000" />
-            <capacity fillType="EMPTYPALLET"    capacity="400000" />
-            <capacity fillType="FERTILIZER"     capacity="400000" />
-            <capacity fillType="HERBICIDE"      capacity="400000" />
+        <storage node="storage" isExtension="false" fillLevelSyncThreshold="20" >
+            <capacity fillType="WATER"          capacity="40000" />
+            <capacity fillType="EMPTYPALLET"    capacity="40000" />
+            <capacity fillType="FERTILIZER"     capacity="40000" />
+            <capacity fillType="HERBICIDE"      capacity="40000" />
             
-            <capacity fillType="OLIVE"          capacity="400000" />
+            <capacity fillType="OLIVE"          capacity="40000" />
+            
+
+            <dynamicFillPlane node="0>9|1|1" allSidePlanes="false" maxAllowedHeapAngle="10" maxDelta="0.3" defaultFillType="FERTILIZER" />
         </storage>
 
         <playerTrigger node="playerTrigger" />
     </productionPoint>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart filename="$data/placeables/sellingStationGeneric/sellingStationGenericNoCover.i3d" node="0" linkNode="grainGutterLinkNode" />
+    </dynamicallyLoadedParts>
 
     <i3dMappings>
         <i3dMapping id="plantRow1" node="0>0|1|0" />
@@ -145,6 +152,7 @@
         <i3dMapping id="unloadTrigger" node="0>0|3|0" />
         <i3dMapping id="unloadTriggerMarker" node="0>0|3|1" />
         <i3dMapping id="unloadTriggerAINode" node="0>0|3|2" />
+        <i3dMapping id="grainGutterLinkNode" node="0>0|3|3" />
         <i3dMapping id="storage" node="0>0|4" />
         <i3dMapping id="playerTrigger" node="0>0|5" />
         <i3dMapping id="playerTriggerMarker" node="0>0|6" />
