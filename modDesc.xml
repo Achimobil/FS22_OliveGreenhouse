@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="67">
+    <author>Achimobil</author>
+    <version>0.1.0.0</version>
+    
+    <title>
+        <en>Olive Greenhouse</en>
+    </title>
+    
+    <description>
+        <en><![CDATA[Olive Greenhouse]]></en>
+    </description>
+    
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+    
+    <storeItems>
+        <storeItem xmlFilename="oliveGreenhouseLarge.xml"/>
+    </storeItems>
+    
+    <brands>
+        <brand name="FARMERTOOLS" title="Farmer Tools" image="store/FarmerTools.dds"/>
+    </brands>
+    
+    <dependencies>
+        <dependency>FS22_A_ProductionRevamp</dependency>
+    </dependencies>
+    
+	<extraSourceFiles>
+        <sourceFile filename="scripts/revamp_check.lua" />              
+	</extraSourceFiles>
+
+    <revamp minVersion="1.2.0.16" />
+</modDesc>

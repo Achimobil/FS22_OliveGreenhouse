@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="oliveTree_stage01" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="12" filename="textures/oliveTreeBranches_withered_diffuse.png"/>
+    <File fileId="11" filename="textures/oliveTreeTrunk_withered_diffuse.png"/>
+    <File fileId="8" filename="$data/maps/trees/oliveTree/oliveTree4LOD_diffuse.png"/>
+    <File fileId="9" filename="$data/maps/trees/oliveTree/oliveTree4LOD_normal.png"/>
+    <File fileId="4" filename="$data/maps/trees/oliveTree/oliveTreeBranches_diffuse.png"/>
+    <File fileId="5" filename="$data/maps/trees/oliveTree/oliveTreeBranches_normal.png"/>
+    <File fileId="6" filename="$data/maps/trees/oliveTree/oliveTreeBranches_specular.png"/>
+    <File fileId="1" filename="$data/maps/trees/oliveTree/oliveTreeTrunk_diffuse.png"/>
+    <File fileId="2" filename="$data/maps/trees/oliveTree/oliveTreeTrunk_normal.png"/>
+    <File fileId="10" filename="$data/shaders/treeBillboardShader.xml"/>
+    <File fileId="7" filename="$data/shaders/treeBranchShader.xml"/>
+    <File fileId="3" filename="$data/shaders/treeTrunkShader.xml"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="oliveTree4LOD_mat" materialId="24" customShaderId="10" customShaderVariation="billboard180">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <CustomParameter name="windSnowLeafScale" value="1 1 1 0"/>
+    </Material>
+    <Material name="oliveTreeBranches_mat" materialId="25" customShaderId="7">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+      <CustomParameter name="windSnowLeafScale" value="1 1 1 0"/>
+    </Material>
+    <Material name="oliveTreeBranches_withered_mat" materialId="26" customShaderId="7">
+      <Texture fileId="12"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+      <CustomParameter name="windSnowLeafScale" value="1 1 1 0"/>
+    </Material>
+    <Material name="oliveTreeTrunk_mat" materialId="27" customShaderId="3">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="windSnowLeafScale" value="1 1 1 0"/>
+    </Material>
+    <Material name="oliveTreeTrunk_withered_mat" materialId="28" customShaderId="3">
+      <Texture fileId="11"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="windSnowLeafScale" value="1 1 1 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="oliveTree.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="oliveTree" nodeId="33">
+        <TransformGroup name="oliveTree_stage04" clipDistance="600" nodeId="34" lodDistance="0 110">
+          <Shape shapeId="1" name="LOD0" rotation="90 -0 0" static="true" collisionMask="26879" clipDistance="300" nodeId="35" materialIds="27" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="2" name="LOD0Attachments" rotation="-90 -0 0" clipDistance="500" nodeId="36" materialIds="25" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="3" name="LOD1" static="true" collisionMask="26879" clipDistance="600" nodeId="37" materialIds="24" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="oliveTree_stage04" clipDistance="600" nodeId="38" lodDistance="0 110">
+          <Shape shapeId="1" name="LOD0" rotation="90 -0 0" clipDistance="300" nodeId="39" materialIds="28" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="2" name="LOD0Attachments" rotation="-90 -0 0" clipDistance="500" nodeId="40" materialIds="26" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="3" name="LOD1" clipDistance="600" nodeId="41" materialIds="24" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+  </Scene>
+
+</i3D>

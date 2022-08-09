@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="FS22_A_ProductionRevamp.RevampGreenhouse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_greenhouseLarge</name>
+        <functions>
+            <function>$l10n_function_productionPoint</function>
+        </functions>
+        <image>store/oliveGreenhouseLarge.png</image>
+        <price>10000</price>
+        <dailyUpkeep>100</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>placeableMisc</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>greenhouses</tab>
+        </brush>
+        <canBeSold>true</canBeSold>
+        <storeIconRendering>
+            <settings cameraXRot="-20" cameraYRot="30" advancedBoundingBox="true"/>
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <filename>model/oliveGreenhouseLarge.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="smallImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="grass"/>
+        </levelAreas>
+    </leveling>
+	
+	<foliageAreas>
+        <foliageArea startNode="foliageArea1Start" widthNode="foliageArea1Width" heightNode="foliageArea1Height" decoFoliage="grassShort" />
+    </foliageAreas>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="unloadTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes" />
+        <triggerMarker node="playerTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+        <triggerMarker node="unloadTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD"  adjustToGround="false" />
+    </triggerMarkers>
+
+    <greenhouse>
+        <plants>
+            <plant fillType="OLIVE"    xmlFilename="oliveTree.xml" />
+        </plants>
+
+        <plantSpaces>
+            <spacesParent node="plantRow1" />
+            <spacesParent node="plantRow2" />
+            <spacesParent node="plantRow3" />
+            <spacesParent node="plantRow4" />
+        </plantSpaces>
+
+        <sounds>
+            <watering template="DEFAULT_SPRAYER" linkNode="0>" loops="0"/>
+        </sounds>
+    </greenhouse>
+
+    <productionPoint>
+        <productions>
+            <production id="tomato" name="$l10n_fillType_olive" cyclesPerHour="1" costsPerActiveHour="5">
+                <inputs>
+                    <input fillType="WATER" amount="100" />
+                    <input fillType="EMPTYPALLET" amount="1000"/>
+                    
+                    <input fillType="FERTILIZER" amount="1000" mix="boost" boostfactor="1.0"/>
+                    <input fillType="HERBICIDE" amount="1000" mix="boost" boostfactor="0.5"/>
+                </inputs>
+                <outputs>
+                    <output fillType="OLIVE" amount="200" />
+                </outputs>
+            </production>
+        </productions>
+
+        <sellingStation node="sellingStation" appearsOnStats="false" supportsExtension="false">
+            <unloadTrigger exactFillRootNode="unloadTrigger" fillTypes="WATER EMPTYPALLET FERTILIZER HERBICIDE" aiNode="unloadTriggerAINode" />
+        </sellingStation>
+
+        <loadingStation fillTypes="WATER" supportsExtension="true" />
+
+        <palletSpawner node="palletSpawner">
+            <spawnPlaces>
+                <spawnPlace startNode="spawnPlace1Start" />
+            </spawnPlaces>
+        </palletSpawner>
+
+        <storage node="storage" isExtension="false" fillTypes="WATER" fillLevelSyncThreshold="20" >
+            <capacity fillType="WATER"          capacity="400000" />
+            <capacity fillType="EMPTYPALLET"    capacity="400000" />
+            <capacity fillType="FERTILIZER"     capacity="400000" />
+            <capacity fillType="HERBICIDE"      capacity="400000" />
+            
+            <capacity fillType="OLIVE"          capacity="400000" />
+        </storage>
+
+        <playerTrigger node="playerTrigger" />
+    </productionPoint>
+
+    <i3dMappings>
+        <i3dMapping id="plantRow1" node="0>0|1|0" />
+        <i3dMapping id="plantRow2" node="0>0|1|1" />
+        <i3dMapping id="plantRow3" node="0>0|1|2" />
+        <i3dMapping id="plantRow4" node="0>0|1|3" />
+        <i3dMapping id="sellingStation" node="0>0|3" />
+        <i3dMapping id="unloadTrigger" node="0>0|3|0" />
+        <i3dMapping id="unloadTriggerMarker" node="0>0|3|1" />
+        <i3dMapping id="unloadTriggerAINode" node="0>0|3|2" />
+        <i3dMapping id="storage" node="0>0|4" />
+        <i3dMapping id="playerTrigger" node="0>0|5" />
+        <i3dMapping id="playerTriggerMarker" node="0>0|6" />
+        <i3dMapping id="palletSpawner" node="0>0|7" />
+        <i3dMapping id="spawnPlace1Start" node="0>0|7|0" />
+        <i3dMapping id="spawnPlace1End" node="0>0|7|0|0" />
+        <i3dMapping id="clearArea1Start" node="0>2|0" />
+        <i3dMapping id="clearArea1Width" node="0>2|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>2|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>3|0" />
+        <i3dMapping id="levelArea1Width" node="0>3|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>3|0|1" />
+        <i3dMapping id="indoorArea1Start" node="0>4|0" />
+        <i3dMapping id="indoorArea1Width" node="0>4|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>4|0|1" />
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+        <i3dMapping id="infoTrigger" node="0>7" />
+        <i3dMapping id="warningStripes" node="0>8" />
+        <i3dMapping id="teleportNode" node="0>11" />
+        <i3dMapping id="foliageArea1Start" node="0>12|0" />
+        <i3dMapping id="foliageArea1Width" node="0>12|0|0" />
+        <i3dMapping id="foliageArea1Height" node="0>12|0|1" />
+    </i3dMappings>
+</placeable>
