@@ -101,10 +101,10 @@
             <production id="tomato" name="$l10n_fillType_olive" cyclesPerHour="1" costsPerActiveHour="5">
                 <inputs>
                     <input fillType="WATER" amount="100" />
-                    <input fillType="EMPTYPALLET" amount="1000"/>
+                    <input fillType="EMPTYPALLET" amount="100"/>
                     
-                    <input fillType="FERTILIZER" amount="1000" mix="boost" boostfactor="1.0"/>
-                    <input fillType="HERBICIDE" amount="1000" mix="boost" boostfactor="0.5"/>
+                    <input fillType="FERTILIZER" amount="50" mix="boost" boostfactor="1.0"/>
+                    <input fillType="HERBICIDE" amount="50" mix="boost" boostfactor="0.5"/>
                 </inputs>
                 <outputs>
                     <output fillType="OLIVE" amount="200" />
@@ -125,16 +125,22 @@
         </palletSpawner>
 
         <storage node="storage" isExtension="false" fillLevelSyncThreshold="20" >
-            <capacity fillType="WATER"          capacity="40000" />
-            <capacity fillType="EMPTYPALLET"    capacity="40000" />
-            <capacity fillType="FERTILIZER"     capacity="40000" />
-            <capacity fillType="HERBICIDE"      capacity="40000" />
+            <capacity fillType="WATER"          capacity="20000" />
+            <capacity fillType="EMPTYPALLET"    capacity="20000" />
+            <capacity fillType="FERTILIZER"     capacity="10000" />
+            <capacity fillType="HERBICIDE"      capacity="10000" />
             
             <capacity fillType="OLIVE"          capacity="40000" />
             
+            <fillPlane fillType="WATER" node="0>9|3|1" minY="-0.4" maxY="0.6" />
+            <fillPlane fillType="HERBICIDE" node="0>9|2|1|2" minY="-0.3" maxY="0" />
 
-            <dynamicFillPlane node="0>9|1|1" allSidePlanes="false" maxAllowedHeapAngle="10" maxDelta="0.3" defaultFillType="FERTILIZER" />
+            <dynamicFillPlane node="0>9|1|1" allSidePlanes="true" maxAllowedHeapAngle="10" maxDelta="0.3" defaultFillType="FERTILIZER" />
         </storage>
+            
+        <productionObjectFillLevels useSubNodesInsteadOfMainNodes="false">
+            <productionObjectFillLevel fillType="EMPTYPALLET" rootNode="0>9|0" maxAtFillLevel="20000"/>
+        </productionObjectFillLevels>
 
         <playerTrigger node="playerTrigger" />
     </productionPoint>
