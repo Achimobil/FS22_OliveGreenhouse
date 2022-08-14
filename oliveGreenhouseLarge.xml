@@ -130,7 +130,7 @@
             <capacity fillType="FERTILIZER"     capacity="10000" />
             <capacity fillType="HERBICIDE"      capacity="10000" />
             
-            <capacity fillType="OLIVE"          capacity="40000" />
+            <capacity fillType="OLIVE"          capacity="200000" />
             
             <fillPlane fillType="WATER" node="0>9|3|1" minY="-0.4" maxY="0.6" />
             <fillPlane fillType="HERBICIDE" node="0>9|2|1|2" minY="-0.3" maxY="0" />
