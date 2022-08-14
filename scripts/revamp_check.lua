@@ -105,6 +105,12 @@ function RevampChecker.test ()
   
   local modName = g_currentModName
   local mod = g_modManager:getModByName(modName)
+  
+  if mod == nil and g_iconGenerator then
+    -- im Icon generator passiert so kein fehler
+    return;
+  end
+  
   local xmlFile = XMLFile.load("TempDesc", mod.modFile)
   
   if xmlFile ~= nil and xmlFile ~= 0 then
