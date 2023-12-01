@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="67">
+<modDesc descVersion="79">
     <author>Achimobil</author>
-    <version>0.2.0.0</version>
+    <version>0.2.0.1</version>
     
     <title>
         <de>Oliven Plantage</de>
@@ -11,7 +11,7 @@
     <description>
         <de><![CDATA[Eine Plantage für Oliven.
 
-Eine Karte oder Mod mit Leerpaletten ist erforderlich.
+Wenn Leerpaletten nicht über die Karte oder einen Mod Produziert werden können, dass sind diese nur in der Produktion kaufbar.
 Der Mod Production Revamp ist erforderlich.
 
 Input: 
@@ -31,7 +31,7 @@ Output:
 10000€ Baukosten]]></de>
         <en><![CDATA[A Plantage for olives.
 
-A map or mod with empty pallets is required.
+If empty pallets cannot be produced via the map or a mod, they can only be purchased in production.
 The Production Revamp mod is required.
 
 Input: 
@@ -70,7 +70,9 @@ Output:
         <sourceFile filename="scripts/revamp_check.lua" />              
 	</extraSourceFiles>
 
-    <revamp minVersion="1.2.0.16" />
+    <revamp minVersion="1.4.3.0" >
+		<fillTypes filename="fillTypes.xml"/>
+	</revamp>
     
     <l10n>
         <text name="oliveGreenhouse">
@@ -81,5 +83,10 @@ Output:
             <de>Ein Plantage für Oliven.</de>
             <en>A Plantage for olives.</en>
         </text>
+		<text name="fillType_leerpalette">
+			<en>Leerpalette</en>
+			<de>Empty Pallet</de>
+			<ru>Пустые поддоны</ru>
+		</text>
     </l10n>
 </modDesc>

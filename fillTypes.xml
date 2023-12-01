@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+	<fillTypes>
+		<fillType name="EMPTYPALLET" title="$l10n_fillType_leerpalette" showOnPriceTable="true">
+			<physics massPerLiter="0.05" maxPhysicalSurfaceAngle="38"/>
+			<economy pricePerLiter="0.45"/>
+			<image hud="store/hud_fill_emptyPallet.png"/>
+		</fillType>
+	</fillTypes>
+</map>
