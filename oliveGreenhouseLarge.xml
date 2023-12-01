@@ -5,7 +5,7 @@
         <functions>
             <function>$l10n_function_oliveGreenhouse</function>
         </functions>
-        <image>store/oliveGreenhouseLarge.png</image>
+        <image>store/store_oliveGreenhouseLarge.png</image>
         <price>10000</price>
         <dailyUpkeep>100</dailyUpkeep>
         <lifetime>1000</lifetime>

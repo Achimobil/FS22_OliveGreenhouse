@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="79">
     <author>Achimobil</author>
-    <version>0.2.0.1</version>
+    <version>1.0.0.0</version>
     
     <title>
         <de>Oliven Plantage</de>
@@ -28,7 +28,12 @@ Output:
 24 Zyklen pro Monat
 120€ Produktionskosten pro Monat
 100€ tägliche Unterhaltskosten
-10000€ Baukosten]]></de>
+10000€ Baukosten
+
+Fehler und verbesserungsvorschläge gerne melden im <a href="https://github.com/Achimobil/FS22_OliveGreenhouse">GitHub</a>
+
+Upload auf anderen Seiten nur durch mich selbst, Verlinkung nur mit Original Downloadlink. KEIN Ersatzlink!
+Das verändern oder erneutes hochladen, ob ganz oder in Teilen ist nicht gestattet!]]></de>
         <en><![CDATA[A Plantage for olives.
 
 If empty pallets cannot be produced via the map or a mod, they can only be purchased in production.
@@ -48,10 +53,15 @@ Output:
 24 cycles per month
 120€ production costs per month
 100€ daily upkeep
-10000€ building costs]]></en>
+10000€ building costs
+
+Please report bugs and suggestions for improvement in <a href="https://github.com/Achimobil/FS22_OliveGreenhouse">GitHub</a>
+
+Upload on other sites only by myself, linking only with original download link. NO substitute link!
+Modifying and re-uploading in whole or in part is not allowed!]]></en>
     </description>
     
-    <iconFilename>icon.png</iconFilename>
+    <iconFilename>icon_oliveGreenhouse.png</iconFilename>
     <multiplayer supported="true"/>
     
     <storeItems>
