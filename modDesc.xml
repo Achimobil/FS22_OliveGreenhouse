@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="79">
     <author>Achimobil</author>
     <version>1.0.0.0</version>
@@ -6,6 +6,7 @@
     <title>
         <de>Oliven Plantage</de>
         <en>Olive Plantage</en>
+        <ru>Оливковый сад</ru>
     </title>
     
     <description>
@@ -88,10 +89,12 @@ Modifying and re-uploading in whole or in part is not allowed!]]></en>
         <text name="oliveGreenhouse">
             <de>Oliven Plantage</de> 
             <en>Olive Plantage</en>
+            <ru>Оливковый сад</ru>
         </text>
         <text name="function_oliveGreenhouse"> 
             <de>Ein Plantage für Oliven.</de>
             <en>A Plantage for olives.</en>
+            <ru>Плантация олив.</ru>
         </text>
 		<text name="fillType_leerpalette">
 			<en>Leerpalette</en>
