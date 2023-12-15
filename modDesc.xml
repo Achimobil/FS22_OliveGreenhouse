@@ -97,8 +97,8 @@ Modifying and re-uploading in whole or in part is not allowed!]]></en>
             <ru>Плантация олив.</ru>
         </text>
 		<text name="fillType_leerpalette">
-			<en>Leerpalette</en>
-			<de>Empty Pallet</de>
+			<en>Empty Pallets</en>
+			<de>Leerpaletten</de>
 			<ru>Пустые поддоны</ru>
 		</text>
     </l10n>
